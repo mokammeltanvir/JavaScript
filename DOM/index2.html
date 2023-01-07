@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Javascript DOM</h2>
+
+    <article id="first-article">
+      <h3>Article Title -1</h3>
+      <p class="author">Author Name-1</p>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptates, quod, quia, voluptatibus quae voluptatem quidem quos
+        voluptatum quibusdam nemo quas. Quisquam, quae. Quisquam, quae.
+        Quisquam, quae. Quisquam, quae.
+      </p>
+    </article>
+    <article class="special">
+      <h3>Article Title -2</h3>
+      <p class="author">Author Name-2</p>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptates, quod, quia, voluptatibus quae voluptatem quidem quos
+        voluptatum quibusdam nemo quas. Quisquam, quae. Quisquam, quae.
+        Quisquam, quae. Quisquam, quae.
+      </p>
+    </article>
+    <article class="special">
+      <h3>Article Title -3</h3>
+      <p class="author">Author Name-3</p>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptates, quod, quia, voluptatibus quae voluptatem quidem quos
+        voluptatum quibusdam nemo quas. Quisquam, quae. Quisquam, quae.
+        Quisquam, quae. Quisquam, quae.
+      </p>
+    </article>
+
+    <ul id="list">
+      <li>List Item -1</li>
+      <li>List Item -2</li>
+      <li>List Item -3</li>
+      <li>List Item -4</li>
+      <li>List Item -5</li>
+    </ul>
+
+    <script>
+      var authors = document.querySelectorAll(".special h3");
+
+      for (var i = 0; i < authors.length; i++) {
+        const element = authors[i];
+
+        element.style.backgroundColor = "yellow";
+        element.style.color = "red";
+        element.style.padding = "10px";
+        element.innerHTML = "Hello JS DOM " + (i + 1);
+      }
+
+      const article = document.getElementById("first-article");
+      const newParagraph = document.createElement("p");
+      newParagraph.innerHTML =
+        "Mokammel Hossaion is a web developer and a web designer.";
+      article.appendChild(newParagraph);
+
+      const list = document.getElementById("list");
+      const newList = document.createElement("li");
+      newList.innerHTML = "List Item -6 new appended";
+      list.appendChild(newList);
+
+      var element = document.querySelector("#list");
+      //element.style.display = "none";
+      element.parentNode.removeChild(element);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM</title>
+  </head>
+  <body>
+    <h1 id="title">Javascript DOM</h1>
+    <p class="text">Lorem ipsum dolor sit amet.</p>
+    <p class="text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</p>
+    <p class="text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</p>
+
+    <script>
+      document.getElementById("title").innerHTML = "Hello JS DOM";
+      document.getElementById("title").style.color = "red";
+      document.getElementById("title").style.backgroundColor = "yellow";
+      document.getElementById("title").style.textAlign = "center";
+      document.getElementById("title").style.padding = "20px";
+
+      document.getElementsByClassName("text")[0].style.fontSize = "50px";
+      document.getElementsByClassName("text")[1].style.backgroundColor = "blue";
+      document.getElementsByClassName("text")[1].style.color = "white";
+    </script>
+  </body>
+</html>

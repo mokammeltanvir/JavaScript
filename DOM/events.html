@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events</title>
+  </head>
+  <body>
+    <h1 onClick="handleClick()">Learning JS Events</h1>
+    <button onClick="handleClick()">Click Me</button>
+    <p id="text">Lorem ipsum dolor sit amet.</p>
+    <p id="text2">Lorem ipsum dolor sit amet.</p>
+    <p id="text3">Lorem ipsum dolor sit amet.</p>
+
+    <button onclick="alert(new Date())">Date</button>
+
+    <button id="dark">Dark Color</button>
+    <button id="white">white Color</button>
+
+    <script>
+      function handleClick() {
+        alert("clicked alert");
+        //console.log("Hello JS Events");
+      }
+
+      function bgColorChange() {
+        document.body.style.backgroundColor = "#00101f";
+        document.body.style.color = "white";
+      }
+      const darkTheme = document.getElementById("dark");
+      darkTheme.addEventListener("click", bgColorChange);
+
+      function bgColorDefault() {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+      }
+
+      const whiteTheme = document.getElementById("white");
+      whiteTheme.addEventListener("click", bgColorDefault);
+    </script>
+  </body>
+</html>
